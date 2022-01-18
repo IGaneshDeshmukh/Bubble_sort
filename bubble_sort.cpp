@@ -2,10 +2,12 @@
 using namespace std;
 
 //this function used for swapping the array elements
-void swap(int *a, int *b){
-    int *temp = *a;
-    a = *b;
-    b = *temp;
+int swap(int * a, int * b){
+    int  temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+    return 0;
 }
 
 //bubble sort function
@@ -33,5 +35,8 @@ void bubble_sort(int arr[], int n){
 int main(){
     int arr[] = {10,9,8,45,2,96,12}; //array size is 7
     bubble_sort(arr,7);
+    for(int i=0;i<7;i++){
+    	cout<<arr[i]<<" ";
+	}
     return 0;
 }
